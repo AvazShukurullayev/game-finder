@@ -18,20 +18,21 @@ const getDay = () => {
     else return day
 }
 
-const currentYear = new Date().getFullYear()
+const currentFullYear = new Date().getFullYear()
+console.log(currentFullYear)
 const currentMonth = getMonth()
 const currentDay = getDay()
 // Current Date
-const currentDate = `${currentYear}-${currentMonth}-${currentDay}`
+const currentYear = `${currentFullYear}-${currentMonth}-${currentDay}`
 //Last year
-const lastYear = `${currentYear - 1}-${currentMonth}-${currentDay}`
+const lastYear = `${currentFullYear - 1}-${currentMonth}-${currentDay}`
 // Next year
-const nextYear = `${currentYear + 1}-${currentMonth}-${currentDay}`
+const nextYear = `${currentFullYear + 1}-${currentMonth}-${currentDay}`
 
-//Popular Games ->> otgan yildan hozirgacha topiladigan oyinlar
+//Popular Games ->> otgan yildan hozirgacha topiladigan game lar
 const popular_games = `games?key=${api_key}&dates=${lastYear},${currentYear}&ordering=-rating&page_size=10`
 
-const popularGames = () => {
+export const popularGames = () => {
     return `${base_url}${popular_games}`
 }
 console.log(popularGames())
