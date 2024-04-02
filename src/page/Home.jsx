@@ -16,29 +16,31 @@ export const Home = () => {
     return (
         <div>
             <h2>Upcoming Games</h2>
-            {upcoming.map(game => <Game
-                    key={game.id}
-                    gameName={game.name}
-                    released={game.released}
-                    img={game.background_image}
-                />
-            )}
+                {upcoming.map(game => <Game
+                        key={game.id}
+                        gameName={game.name}
+                        released={game.released}
+                        img={game.background_image}
+                    />
+                )}
+
             <h2>Popular Games</h2>
-            {popular.map(game => <Game
-                    key={game.id}
-                    gameName={game.name}
-                    released={game.released}
-                    img={game.background_image}
-                />
-            )}
+                {popular.map(game => <Game
+                        key={game.id}
+                        gameName={game.name}
+                        released={game.released}
+                        img={game.background_image}
+                    />
+                )}
+
             <h2>New Games</h2>
-            {newGames.map(game => <Game
-                    key={game.id}
-                    gameName={game.name}
-                    released={game.released}
-                    img={game.background_image}
-                />
-            )}
+                {newGames.map(game => <Game
+                        key={game.id}
+                        gameName={game.name}
+                        released={game.released}
+                        img={game.background_image}
+                    />
+                )}
         </div>
     )
 }
