@@ -19,7 +19,6 @@ const getDay = () => {
 }
 
 const currentFullYear = new Date().getFullYear()
-console.log(currentFullYear)
 const currentMonth = getMonth()
 const currentDay = getDay()
 // Current Date
